@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - target: 5432
+        published: 5432
+        mode: host
+        protocol: tcp
+    environment:
+      POSTGRES_PASSWORD: "SuperSafePassword"
+      POSTGRES_USER: "SuperSafeUser"
+      POSTGRES_DB: "schuelerzeitung"
+      POSTGRES_HOST_AUTH_METHOD: md5
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - target: 6379
+        published: 6379
+        mode: host
+        protocol: tcp
