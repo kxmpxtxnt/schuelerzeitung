@@ -4,8 +4,8 @@ POST http://0.0.0.0:8080/register
 Content-Type: application/json
 
 {
-  "username": "Paul Kindler",
-  "email": "pa179kin@gmail.com",
+  "username": "Paule Pullmo",
+  "email": "name@provider.tld",
   "password": "SuperSafePassword"
 }
 
@@ -15,6 +15,6 @@ POST http://0.0.0.0:8080/login
 Content-Type: application/json
 
 {
-  "email": "pa179kin@gmail.com",
+  "email": "name@provider.tld",
   "password": "SuperSafePassword"
 }
