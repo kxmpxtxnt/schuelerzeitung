@@ -1,9 +1,9 @@
 package fyi.pauli.schuelerzeitung.server.auth
 
 import fyi.pauli.schuelerzeitung.redis.jedis
+import fyi.pauli.schuelerzeitung.server.auth.storage.SessionStorageRedis
 import fyi.pauli.schuelerzeitung.server.routing.auth.login
 import fyi.pauli.schuelerzeitung.server.routing.auth.register
-import fyi.pauli.schuelerzeitung.server.auth.storage.SessionStorageRedis
 import io.ktor.server.application.*
 import io.ktor.server.routing.*
 import io.ktor.server.sessions.*

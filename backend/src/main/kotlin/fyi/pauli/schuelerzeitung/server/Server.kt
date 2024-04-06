@@ -18,4 +18,5 @@ fun Application.server() {
 	}
 
 	sessionTokenAuth()
+	basicRoutes()
 }

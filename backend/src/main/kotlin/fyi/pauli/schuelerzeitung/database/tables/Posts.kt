@@ -13,6 +13,7 @@ object Posts : IntIdTable("posts") {
 	val date: Column<Instant> = timestamp("date")
 	val route: Column<String> = text("route")
 	val title: Column<String> = text("title")
+	val author: Column<EntityID<String>> = reference("author", Users.id)
 	val content: Column<String> = largeText("content")
 	val views: Column<Int> = integer("views")
 
@@ -24,6 +25,7 @@ class Post(id: EntityID<Int>) : IntEntity(id) {
 	var date: Instant by Posts.date
 	var route: String by Posts.route
 	var title: String by Posts.title
+	var author: User by User referencedOn Posts.author
 	var content: String by Posts.content
 	var views: Int by Posts.views
 

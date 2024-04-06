@@ -2,8 +2,8 @@ package fyi.pauli.schuelerzeitung.server.routing.auth
 
 import fyi.pauli.schuelerzeitung.database.tables.User
 import fyi.pauli.schuelerzeitung.database.tables.Users
+import fyi.pauli.schuelerzeitung.server.Login
 import fyi.pauli.schuelerzeitung.server.auth.UserSession
-import fyi.pauli.schuelerzeitung.server.routing.Login
 import fyi.pauli.schuelerzeitung.util.Token
 import io.ktor.http.*
 import io.ktor.server.application.*
