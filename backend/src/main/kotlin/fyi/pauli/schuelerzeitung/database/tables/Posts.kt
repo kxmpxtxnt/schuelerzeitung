@@ -15,6 +15,7 @@ object Posts : IntIdTable("posts") {
 	val title: Column<String> = text("title")
 	val author: Column<EntityID<String>> = reference("author", Users.id)
 	val content: Column<String> = largeText("content")
+	val preview: Column<String> = mediumText("preview")
 	val views: Column<Int> = integer("views")
 
 }
@@ -27,6 +28,7 @@ class Post(id: EntityID<Int>) : IntEntity(id) {
 	var title: String by Posts.title
 	var author: User by User referencedOn Posts.author
 	var content: String by Posts.content
+	var preview: String by Posts.preview
 	var views: Int by Posts.views
 
 }
